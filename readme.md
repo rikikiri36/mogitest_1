@@ -10,14 +10,16 @@
 ### Laravel環境構築
 1. composer install
 2. cp .env.example .env
-　　※コピー後、下記環境変数を変更
-　　> DB_HOST=mysql
-　　> DB_DATABASE=laravel_db
-　　> DB_USERNAME=laravel_user
-　　> DB_PASSWORD=laravel_pass
-3. php artisan key:generate
-4. php artisan migrate:fresh
-5. php artisan db:seed
+3. コピー後、下記環境変数を変更し、stripeのAPIキーを入力
+  - DB_HOST=mysql
+  - DB_DATABASE=laravel_db
+  - DB_USERNAME=laravel_user
+  - DB_PASSWORD=laravel_pass
+  - STRIPE_KEY=pk_test_
+  - STRIPE_SECRET=sk_test_
+4. php artisan key:generate
+5. php artisan migrate:fresh
+6. php artisan db:seed
 
 ## 使用技術
 ---
