@@ -4,7 +4,7 @@
 ---
 
 ### Dockerビルド
-1. git clone https://github.com/rikikiri36/mogitest1
+1. git clone https://github.com/rikikiri36/mogitest_1
 2. docker compose up -d --build
 
 ### Laravel環境構築
