@@ -25,6 +25,8 @@
 　　↑ここから商品画像をDLして６のパスに保存する
 8. php artisan storage:link
 
+9. テストを実施する際はsrc上で docker compose exec php php artisan test   を実行する
+
 
 
 ## 使用技術
