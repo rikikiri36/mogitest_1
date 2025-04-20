@@ -20,6 +20,12 @@
 3. php artisan key:generate
 4. php artisan migrate:fresh
 5. php artisan db:seed
+6. mkdir -p storage/app/public/images/items
+7. https://docs.google.com/spreadsheets/d/1x7wLGoMWcLpIAZPfdQYFAsd5p2vb9eY2_bTFU2pWEpI/edit?gid=1952069169#gid=1952069169
+　　↑ここから商品画像をDLして６のパスに保存する
+8. php artisan storage:link
+
+
 
 ## 使用技術
 
