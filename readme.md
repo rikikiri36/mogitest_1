@@ -44,3 +44,9 @@
    http://localhost/
 2. phpMyAdmin
    http://localhost:8080/
+
+## テストユーザー
+- メールアドレス
+testtesttest@example.com
+- パスワード
+123123123
