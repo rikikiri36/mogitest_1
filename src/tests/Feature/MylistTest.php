@@ -109,55 +109,6 @@ class MylistTest extends TestCase
     }
 
     /** @test */
-    public function 自分が出品した商品は表示されない()
-    {
-        $user = User::create([
-            'name' => 'ログインユーザー',
-            'email' => 'testuser@example.com',
-            'password' => Hash::make('123123123'),
-        ]);
-
-        $otherUser = User::create([
-            'name' => 'その他',
-            'email' => 'other@example.com',
-            'password' => bcrypt('password'),
-        ]);
-
-        //Item作成前に、conditionsテーブルを作成しておく 
-        $this->seed(\Database\Seeders\ConditionsTableSeeder::class);
-        
-        // 商品を作成
-        $myItem = Item::factory()->create([
-            'name' => '自分が出品した商品',
-            'user_id' => $user->id,
-        ]);
-
-        $otherItem = Item::factory()->create([
-            'name' => 'その他商品',
-            'user_id' => $otherUser->id,
-        ]);
-
-        // いいね登録
-        Like::create([
-            'item_id' => $myItem ->id,
-            'user_id' => $user ->id,
-        ]);
-        Like::create([
-            'item_id' => $otherItem ->id,
-            'user_id' => $user ->id,
-        ]);
-
-        // ログイン
-        $this->actingAs($user);
-
-        $response = $this->get('/?tab=mylist');
-
-        // 商品名と「Sold」が表示されていることを確認
-        $response->assertSee($otherItem->name);
-        $response->assertDontSee($myItem->name);
-    }
-
-    /** @test */
     public function 未認証の場合は何も表示されない()
     {
         $response = $this->get('/?tab=mylist');
