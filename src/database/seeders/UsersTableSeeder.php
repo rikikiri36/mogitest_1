@@ -17,13 +17,13 @@ class UsersTableSeeder extends Seeder
     {
         $param = [
             'name' => 'てすと太郎',
-            'email' => 'test@example.com',
+            'email' => 'testtesttest@example.com',
             'password' => Hash::make('123123123'),
         ];
         DB::table('users')->insert($param);
         $param = [
             'name' => 'てすと花子',
-            'email' => 'test2@example.com',
+            'email' => 'testtesttest2@example.com',
             'password' => Hash::make('123123123'),
         ];
         DB::table('users')->insert($param);    }
