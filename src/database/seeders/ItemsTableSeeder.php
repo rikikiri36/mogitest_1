@@ -107,7 +107,7 @@ class ItemsTableSeeder extends Seeder
         $param = [
             'name' => 'メイクセット',
             'price' => 2500,
-            'image' => 'images/items/makeset.jpg',
+            'image' => 'images/items/外出メイクアップセット.jpg',
             'condition_id' => 1,
             'brand' => '',
             'description' => '便利なメイクアップセット',
