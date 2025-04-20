@@ -9,7 +9,7 @@
 2. docker compose up -d --build
 
 ### ２.Laravel環境構築
-1. composer install
+1. srcに移動してcomposer installを実行
 2. 「.env.example」をコピーして「.env」ファイルを作成し、下記環境変数の変更・stripeのAPIキーを入力する
   - DB_HOST=mysql
   - DB_DATABASE=laravel_db
